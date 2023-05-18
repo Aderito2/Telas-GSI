@@ -24,7 +24,7 @@ import { Avatar, Breadcrumb, Layout, Menu, theme } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
 const SlideData = [
   {
-    path: "funcionario",
+    path: "dados",
     nome: "Funcionarios",
   },
   {
