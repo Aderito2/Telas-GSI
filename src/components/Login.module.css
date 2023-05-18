@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: #388476;
+  overflow: hidden;
+}
+::selection{
+  background: #144e43;
+}
+.LoginContainer{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 100px auto;
+}
+.LoginWrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.LoginWrapper .LoginTitle{
+  height: 90px;
+  background: #144e43;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.LoginWrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.LoginWrapper form .LoginRow{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.LoginWrapper form .LoginRow input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .LoginRow input:focus{
+  border-color: #144e43;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .LoginRow input::placeholder{
+  color: #999;
+}
+.LoginWrapper form .LoginRow i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background:#144e43;
+  border: 1px solid #144e43;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.LoginWrapper form .LoginPass{
+  margin: -8px 0 20px 0;
+}
+.LoginWrapper form .LoginPass a{
+  color: #144e43;
+  font-size: 17px;
+  text-decoration: none;
+}
+.LoginWrapper form .LoginPass a:hover{
+  text-decoration: underline;
+}
+.LoginWrapper form .LoginButton input{
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #144e43;
+  border: 1px solid #144e43;
+  cursor: pointer;
+}
+form .LoginButton input:hover{
+  background: #144e43;
+}
+.LoginWrapper form .LoginSignup{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.LoginWrapper form .LoginSignup a{
+  color: #144e43;
+  text-decoration: none;
+}
+form .LoginSignup a:hover{
+  text-decoration: underline;
+}
