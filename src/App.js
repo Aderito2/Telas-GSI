@@ -1,5 +1,4 @@
 //import Reaect,{useState,useEffect} from '';
-import './App.css';
 import Login from './paginas/Login';
 import Dados from './components/FormCadastro';
 import Painel from './paginas/Painel';
