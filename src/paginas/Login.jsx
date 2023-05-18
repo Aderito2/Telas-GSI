@@ -19,7 +19,6 @@ function Login() {
     autoComplete="off"
   >
     <Form.Item
-    
       name="username"
       rules={[{ required: true, message: 'Porfavor insira teu username!' }]}
     >
