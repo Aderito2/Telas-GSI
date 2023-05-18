@@ -1,15 +1,14 @@
 //import Reaect,{useState,useEffect} from '';
 import './App.css';
-import Login from './components/Login';
+import Login from './paginas/Login';
 import Dados from './components/FormCadastro';
-import Painel from './components/Painel';
+import Painel from './paginas/Painel';
 import Registar from './components/FormMaterial';
 import Materiais from './components/ListaMaterial';
 import Funcionarios from './components/ListaFuncionarios';
 import PedidoMaterial from './components/PedidoMaterial';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Rotas from './Rotas';
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
             <Route path='materiais' element= {<Materiais/>} />
             <Route path='funcionarios' element= {<Funcionarios/>} />
             <Route path='pedidomaterial' element= {<PedidoMaterial/>} />
-
           </Route>
         </Routes>
       </Router>

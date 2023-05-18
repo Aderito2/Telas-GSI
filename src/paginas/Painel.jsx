@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Dados from './FormCadastro';
-import Registar from './FormMaterial';
-import Materiais from './ListaMaterial';
-import Funcionarios from './ListaFuncionarios';
-import PedidoMaterial from './PedidoMaterial';
+import Dados from './../components/FormCadastro';
+import Registar from './../components/FormMaterial';
+import Materiais from './../components/ListaMaterial';
+import Funcionarios from './../components/ListaFuncionarios';
+import PedidoMaterial from './../components/PedidoMaterial';
 import { Outlet, NavLink } from 'react-router-dom';
 
 

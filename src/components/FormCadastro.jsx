@@ -23,7 +23,7 @@ const validateMessages = {
   } 
 };
 
-function Dados(props){
+export default function FormCadastro(props){
 
     return(
         <div className='bg-blue-100 pt-4' >
@@ -78,4 +78,3 @@ function Dados(props){
         </div>
     )
 }
-export default Dados;
