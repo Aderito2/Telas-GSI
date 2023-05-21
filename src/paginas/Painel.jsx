@@ -95,7 +95,9 @@ function Painel() {
         </div>
       </Sider>
       <Layout className="site-layout" style={{ marginLeft: 200 }}>
-        <Header style={{ padding: 0, background: colorBgContainer }} />
+        <Header style={{ padding: 0, background: colorBgContainer }} >
+          cima
+        </Header>
         <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
           <div style={{ padding: 24, textAlign: 'center', background: colorBgContainer }}>
             <Outlet />

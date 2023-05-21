@@ -10,14 +10,14 @@ function Login() {
   useEffect(() => {
     (async () => {
       let response = await GetMateriais()
-      console.log("Consegui: ", response)
+      console.log(response)
       // setPublicacoes(response.data)
     })()
   }, [])
 
   return (
     <div className='flex flex-col items-center justify-center  h-screen '>
-      <div className='text-center italic text-5xl text-blue-950'><b>Login</b></div>
+      <div className='text-center italic text-5xl text-blue-950 mb-5'><b>Login</b></div>
       <Form
         layout="vertical"
         name="basic"

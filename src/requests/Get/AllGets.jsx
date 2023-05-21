@@ -9,17 +9,15 @@ export function AllGets() {
             // headers: {
             //     'Access-Control-Allow-Origin': '*',
             //     'Content-Type': 'application/json',
-            //     'Accept': 'application/json',
+            //     'Accept': 'application/json'
             //     // Authorization: 'Bearer ' + win.getItem("token")
             // },
 
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
                 return data
             })
-        console.log(dados)
         return dados
     }
 
