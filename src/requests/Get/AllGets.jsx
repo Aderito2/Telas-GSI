@@ -3,21 +3,23 @@
 export function AllGets() {
     const win = window.sessionStorage;
 
-    async function GetPublicacoes() {
-        let dados = fetch("http://127.0.0.1:8000/api/publicacoes", {
+    async function GetMateriais() {
+        let dados = fetch("http://127.0.0.1:8000/material/", {
             method: 'GET',
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                Authorization: 'Bearer ' + win.getItem("token")
-            },
+            // headers: {
+            //     'Access-Control-Allow-Origin': '*',
+            //     'Content-Type': 'application/json',
+            //     'Accept': 'application/json',
+            //     // Authorization: 'Bearer ' + win.getItem("token")
+            // },
 
         })
             .then((response) => response.json())
             .then((data) => {
+                console.log(data)
                 return data
             })
+        console.log(dados)
         return dados
     }
 
@@ -59,5 +61,5 @@ export function AllGets() {
         return dados
     }
 
-    return { GetPublicacoes, GetUmaPublicacao, GetUsuario }
+    return { GetMateriais, GetUmaPublicacao, GetUsuario }
 }

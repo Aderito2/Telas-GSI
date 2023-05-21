@@ -79,7 +79,7 @@ export default function FormCadastro(props) {
       </Form>
     )
   }
-
+  
   interface DataType {
     key: string;
     name: string;

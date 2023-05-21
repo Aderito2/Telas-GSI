@@ -32,7 +32,7 @@ const SlideData = [
     nome: "Categorias",
   },
   {
-    path: "/perfil",
+    path: "material",
     nome: "Material",
   },
   {
