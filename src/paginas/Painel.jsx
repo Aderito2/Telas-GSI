@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import Dados from './../components/FormCadastro';
-import Registar from './../components/FormMaterial';
-import Materiais from './../components/ListaMaterial';
-import Funcionarios from './../components/ListaFuncionarios';
-import PedidoMaterial from './../components/PedidoMaterial';
+import Log from './../Imagens/Logo.jpeg'
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { HiOutlineUserGroup, HiOutlineDocumentDuplicate } from "react-icons/hi";
 import { RiUserLocationLine } from "react-icons/ri";
 import { AiOutlineUser, AiOutlineAreaChart } from "react-icons/ai";
-import { BsSendExclamation } from "react-icons/bs";
+import { BsSendExclamation, BsSearch } from "react-icons/bs";
+import { IoMdNotificationsOutline } from "react-icons/io";
+import { CiSettings, CiSearch } from "react-icons/ci";
 import {
   BarChartOutlined,
   CloudOutlined,
@@ -19,7 +17,7 @@ import {
   VideoCameraOutlined,
   LogoutOutlined
 } from '@ant-design/icons';
-import { Avatar, Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Avatar, Badge, Breadcrumb, Divider, Input, Layout, Menu, Tooltip, theme } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
 const SlideData = [
@@ -83,10 +81,15 @@ function Painel() {
         }}
       >
         <div className="demo-logo-vertical" />
-        <div className='flex flex-col  gap-2 pl-8 pt-16 mb-16'>
-          <Avatar className='flex items-center justify-center' size={60} icon={<UserOutlined />} />
-          <span className='font-bold'>Ginovaldo Cumbe</span>
-          <span className='font-[50] text-xs'>ginovaldocumbe@gmail</span>
+        <div className='flex flex-col gap-2 pl-8'>
+          <div className='w-28'>
+            <img className='h-fit' src={Log} alt="" />
+          </div>
+          <Divider />
+          <div className='flex flex-row gap-2 -translate-x-5 -translate-y-3 mb-8'>
+            <Avatar className='flex items-center justify-center' shape="square" size={24} icon={<UserOutlined />} />
+            <span className='font-semibold'>Ginovaldo Cumbe</span>
+          </div>
         </div>
         <Menu onClick={({ key }) => navigate(key)} mode="inline" defaultSelectedKeys={['4']} items={items} />
         <div className='absolute bottom-2 flex items-center w-full pl-7 gap-3'>
@@ -95,10 +98,20 @@ function Painel() {
         </div>
       </Sider>
       <Layout className="site-layout" style={{ marginLeft: 200 }}>
-        <Header style={{ padding: 0, background: colorBgContainer }} >
-          cima
+        <Header className='flex items-center justify-between !px-6 h-12' style={{ padding: 0, background: colorBgContainer }} >
+          <Input className='w-96 rounded-3xl' placeholder="Pesquise" prefix={<BsSearch className='text-slate-400' />} />
+          <div className='flex flex-row items-center gap-2'>
+            <Tooltip title="Notificações">
+              <Badge dot>
+                <IoMdNotificationsOutline className='text-lg text-slate-600' />
+              </Badge>
+            </Tooltip>
+            <Tooltip title="Definições">
+              <CiSettings className='text-xl' />
+            </Tooltip>
+          </div>
         </Header>
-        <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
+        <Content style={{ margin: '18px 13px 0', overflow: 'initial' }}>
           <div style={{ padding: 24, textAlign: 'center', background: colorBgContainer }}>
             <Outlet />
           </div>
